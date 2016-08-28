@@ -10,8 +10,11 @@ public class HelloWorld {
 
 	private static Logger LOG;
 	public static void main(String[] args ){
+		
+		int port = getHerokuAssignedPort();
+		
 		LOG = LoggerFactory.getLogger(HelloWorld.class);
-		LOG.info("We are logging");
+		LOG.info("We are logging using Port [{}]", port);
 		
 		before((request, response) -> {
 			LOG.info("We are attempting some before filter");
@@ -33,4 +36,12 @@ public class HelloWorld {
 			LOG.info("we are attempting some after filter");
 		});
 	}
+	
+    static int getHerokuAssignedPort() {
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        if (processBuilder.environment().get("PORT") != null) {
+            return Integer.parseInt(processBuilder.environment().get("PORT"));
+        }
+        return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
+    }	
 }
