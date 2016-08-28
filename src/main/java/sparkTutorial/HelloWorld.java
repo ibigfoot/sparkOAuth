@@ -15,7 +15,7 @@ public class HelloWorld {
 		
 		LOG = LoggerFactory.getLogger(HelloWorld.class);
 		LOG.info("We are logging using Port [{}]", port);
-		
+		port(port);
 		before((request, response) -> {
 			LOG.info("We are attempting some before filter");
         });
