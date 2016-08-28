@@ -8,6 +8,7 @@
 	<description>Playing around with the spark framework</description>
 
 	<build>
+		<finalName>sparkTutorial</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

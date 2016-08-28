@@ -1,1 +1,1 @@
-web: java -jar target/spark-0.0.1-SNAPSHOT.jar
+web: java -jar target/sparkTutorial-jar-with-dependencies.jar
