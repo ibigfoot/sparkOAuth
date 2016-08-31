@@ -43,15 +43,15 @@ public class APIUtils {
 	public APIUtils () {
 		ProcessBuilder processBuilder = new ProcessBuilder();
 		
-		if (processBuilder.environment().get("client_id") != null) {
-			clientId = processBuilder.environment().get("client_id");
+		if (processBuilder.environment().get("CLIENT_ID") != null) {
+			clientId = processBuilder.environment().get("CLIENT_ID");
 		}
 		
-		if(processBuilder.environment().get("redirect") != null) {
-			redirect = processBuilder.environment().get("redirect"); 
+		if(processBuilder.environment().get("REDIRECT_URI") != null) {
+			redirect = processBuilder.environment().get("REDIRECT_URI"); 
 		}
-		if(processBuilder.environment().get("client_secret") != null) {
-			clientSecret = processBuilder.environment().get("client_secret"); 
+		if(processBuilder.environment().get("CLIENT_SECRET") != null) {
+			clientSecret = processBuilder.environment().get("CLIENT_SECRET"); 
 		}
 	}
 	
