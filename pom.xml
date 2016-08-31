@@ -36,7 +36,7 @@
 					</descriptorRefs>
 					<archive>
 						<manifest>
-							<mainClass>sparkTutorial.HelloWorld</mainClass>
+							<mainClass>sparkTutorial.OrgDocumenter</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
