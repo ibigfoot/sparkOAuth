@@ -50,8 +50,6 @@
 					<!-- Use your own application name -->
 					<appName>murmuring-refuge-44794</appName>
 					<processTypes>
-						<!-- Tell Heroku how to launch your application -->
-						<!-- You might have to remove the ./ in front -->
 						<web>java -jar target/spark-0.0.1-SNAPSHOT.jar</web>
 					</processTypes>
 				</configuration>
@@ -65,10 +63,34 @@
 			<artifactId>spark-core</artifactId>
 			<version>2.5</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.sparkjava</groupId>
+			<artifactId>spark-debug-tools</artifactId>
+			<version>0.5</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-simple</artifactId>
 			<version>1.7.21</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sparkjava</groupId>
+			<artifactId>spark-template-handlebars</artifactId>
+			<version>2.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.json/json -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20160810</version>
 		</dependency>
 
 	</dependencies>
