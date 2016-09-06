@@ -13,7 +13,7 @@ public class BeforeFilters {
 	
 	public static Filter addTrailingSlashes = (Request request, Response response) -> {
 		
-		LOG.info("We are adding trailing slashes to the request if they don't exist");
+		LOG.info("This is where our before filters would go");
 		if(!request.pathInfo().endsWith("/")) {
 			response.redirect(request.pathInfo() + "/");
 		}

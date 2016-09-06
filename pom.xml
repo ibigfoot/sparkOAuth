@@ -4,8 +4,8 @@
 	<groupId>uk.co.force</groupId>
 	<artifactId>spark</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Spark Tutorial</name>
-	<description>Playing around with the spark framework</description>
+	<name>Spark OAuth</name>
+	<description>Starter for OAuth using Spark and Moustache</description>
 
 	<build>
 		<finalName>sparkTutorial</finalName>

@@ -11,11 +11,6 @@
     "REDIRECT_URI": {
       "description": "OAuth redirect URI from IdP",
       "value": "<YOUR VALUE HERE>"
-    },
-    "org.slf4j.simpleLogger.defaultLogLevel": {
-      "description": "SLF4J logging level - debug | info | warn | error",
-      "value": "error"
-    }
-    
+    }    
   }
 }

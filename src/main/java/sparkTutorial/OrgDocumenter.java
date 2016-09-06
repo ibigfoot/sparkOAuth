@@ -6,8 +6,6 @@ import static spark.debug.DebugScreen.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import sparkTutorial.apex.ApexController;
-import sparkTutorial.filters.BeforeFilters;
 import sparkTutorial.home.HomeController;
 import sparkTutorial.login.LoginController;
 
@@ -31,16 +29,7 @@ public class OrgDocumenter {
 		get("/oauth/*", LoginController.oauth);
 		
 		get("/home", HomeController.home);
-		
-		get("/apex", ApexController.getApex);
-		
-		get("/apexclass/:id", ApexController.getApexDetail);
-		
-/*
-		after((request, response) -> {
-			LOG.info("we are attempting some after filter");
-		});
-*/
+
 	}
 
 	static int getHerokuAssignedPort() {

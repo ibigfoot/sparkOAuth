@@ -1,7 +1,6 @@
 package sparkTutorial;
 
 import java.io.BufferedReader;
-import java.io.IOError;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
@@ -25,33 +24,33 @@ import org.slf4j.LoggerFactory;
 
 public class APIUtils {
 
-	/*
+	/* I use two different dev orgs for this, one configured to my localhost environment
+	 * and one configured to my heroku environment. The configuration is in the connected
+	 * app for the OAuth callback (Salesforce allows http://localhost)
 	 * troy@documenter.org - prod callback
-	 * troy@documenter.dev - localhost callback
+	 * troy@documenter.local - localhost callback
 	 */
-	private String clientId = "3MVG9HxRZv05HarS85y9sOHV7cqSXjzJryBBT8TOhVvBIRo.EAxl4onR1Bq8DSN5toybqAVST6CkF9z8k_6ov";
-	private String redirect = "http://localhost:4567/oauth/_callback";
-	private String clientSecret = "6724806878769054841";
+	private String clientId = null;
+	private String redirect = null;
+	private String clientSecret = null;
 	
 	private static Logger LOG = LoggerFactory.getLogger(APIUtils.class); 
 	
-	public static final String AUTH_TOKEN = "authToken";
-	public static final String CLIENT_ID = "clientId";
-	public static final String CLIENT_SECRET = "clientSecret";
-	public static final String REDIRECT_URI = "redirectURI";
+	public static final String AUTH_TOKEN = "auth_token";
+	public static final String CLIENT_ID = "client_id";
+	public static final String CLIENT_SECRET = "client_secret";
+	public static final String REDIRECT_URI = "redirect_uri";
 	
 	public APIUtils () {
-		ProcessBuilder processBuilder = new ProcessBuilder();
 		
-		if (processBuilder.environment().get("CLIENT_ID") != null) {
-			clientId = processBuilder.environment().get("CLIENT_ID");
-		}
+		clientId = System.getenv(CLIENT_ID);
+		redirect = System.getenv(REDIRECT_URI); 
+		clientSecret = System.getenv(CLIENT_SECRET); 
 		
-		if(processBuilder.environment().get("REDIRECT_URI") != null) {
-			redirect = processBuilder.environment().get("REDIRECT_URI"); 
-		}
-		if(processBuilder.environment().get("CLIENT_SECRET") != null) {
-			clientSecret = processBuilder.environment().get("CLIENT_SECRET"); 
+		LOG.info("{} [{}] {} [{}] {} [{}]", CLIENT_ID, clientId, CLIENT_SECRET, clientSecret, REDIRECT_URI, redirect);
+		
+		if(clientId == null || redirect == null || clientSecret == null) {
+			throw new RuntimeException("Unable to configure OAuth parameters. Check you system properties contain "+CLIENT_ID+" : "+REDIRECT_URI+" : "+CLIENT_SECRET);
 		}
 	}
 	
