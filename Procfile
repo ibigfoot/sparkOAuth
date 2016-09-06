@@ -1,1 +1,1 @@
-web: java -jar target/sparkTutorial-jar-with-dependencies.jar
+web: java -jar target/sparkTutorial-jar-with-dependencies.jar --session-store memcache
