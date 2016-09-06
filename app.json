@@ -6,15 +6,15 @@
   "keywords": ["java", "oauth", "salesforce", "spark"],
   "addons": ["memcachier:dev"],
   "env": {
-    "CLIENT_ID": {
+    "client_id": {
       "description": "OAuth client id from Identity Provider. ",
       "value": "<YOUR VALUE HERE>"
     },
-    "CLIENT_SECRET": {
+    "client_secret": {
       "description": "OAuth client secret from IdP",
       "value": "<YOUR VALUE HERE>"
     },
-    "REDIRECT_URI": {
+    "redirect_uri": {
       "description": "OAuth redirect URI from IdP",
       "value": "<YOUR VALUE HERE>"
     }    

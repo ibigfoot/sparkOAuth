@@ -16,18 +16,23 @@ Run locally from the commandline with
 Or 
 Run directly from Eclipse 
 
-- Run->External Tools->External Tool Configurations
-- Add new program
-- Set Location to your java executible (for my mac os x this was at /usr/bin/java)
-- Set Working directory to your project root
-- Go the environment tab and set the OAuth parameters 
-    - client_id
-    - client_secret
-    - redirect_uri
-- optionally, set -Dorg.slf4j.simpleLogger.defaultLogLevel
+* Run->External Tools->External Tool Configurations
+* Add new program
+* Set Location to your java executible (for my mac os x this was at /usr/bin/java)
+* Set Working directory to your project root
+* Go the environment tab and set the OAuth parameters 
+  * client_id
+  * client_secret
+  * redirect_uri
+* optionally, set -Dorg.slf4j.simpleLogger.defaultLogLevel
 
 ##Run Heroku
 
 Here is a friendly Heroku button... Once deployed you will need to update your config vars to point to use the OAuth params in your IdP 
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+Once you have deployed you might need to update the OAuth params. 
+* client_id is the Consumer Key value in your Salesforce connected app
+* client_secret is the Consumer Secret value in your connected app
+* redirect\_uri is the callback URL, you will need to update this value in your connected app as well (you know, update it with the URL for the app you are about to deploy) it will need to look something like https://<<some heroku app url>>/oauth/_callback   (the /oauth/_callback is very important) 
