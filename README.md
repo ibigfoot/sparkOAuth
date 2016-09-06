@@ -1,4 +1,4 @@
-#Tomcat Template
+#Java Spark OAuth Template
 
 A simple java web app built with Spark and Moustache configured for [Heroku](www.heroku.com) and local development.
 Have a look at how to configure a [ConnectedApp](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_defining_remote_access_applications.htm) in Salesforce.
@@ -30,4 +30,4 @@ Run directly from Eclipse
 
 Here is a friendly Heroku button... Once deployed you will need to update your config vars to point to use the OAuth params in your IdP 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
