@@ -24,6 +24,8 @@ public class OrgDocumenter {
 		
 		before("*", LoginController.isUserAuthenticated);
 		
+		redirect.get(".", "/login"); 
+		
 		get("/login", LoginController.loginPage);
 
 		get("/oauth/*", LoginController.oauth);
