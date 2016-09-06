@@ -1,4 +1,10 @@
 {
+  "name": "Spark OAuth Template",
+  "description": "A barebones Java Spark webapp that simply provides OAuth to Salesforce",
+  "repository": "https://github.com/ibigfoot/sparkOAuth",
+  "logo": "https://spark.apache.org/docs/0.9.1/img/spark-logo-hd.png",
+  "keywords": ["java", "oauth", "salesforce", "spark"],
+  "addons": ["memcachier:dev"],
   "env": {
     "CLIENT_ID": {
       "description": "OAuth client id from Identity Provider. ",
