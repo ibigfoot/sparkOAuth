@@ -4,7 +4,6 @@
   "repository": "https://github.com/ibigfoot/sparkOAuth",
   "logo": "https://spark.apache.org/docs/0.9.1/img/spark-logo-hd.png",
   "keywords": ["java", "oauth", "salesforce", "spark"],
-  "addons": ["memcachier:dev"],
   "env": {
     "client_id": {
       "description": "OAuth client id from Identity Provider. ",
